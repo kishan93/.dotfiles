@@ -6,14 +6,23 @@ use rand::seq::SliceRandom;
 fn main() {
     // Get the seed from the command line arguments
     let args: Vec<String> = env::args().collect();
-    if args.len() < 2 {
-        println!("Usage: cargo run <seed>");
+    if args.len() < 3 {
+        println!("Usage: cargo run <seed> <password_length>");
         return;
     }
     let seed: u64 = match args[1].parse() {
         Ok(num) => num,
         Err(_) => {
             println!("Seed must be a valid integer");
+            return;
+        }
+    };
+
+    // Get the password length from the command line arguments
+    let password_length: usize = match args[2].parse() {
+        Ok(num) => num,
+        Err(_) => {
+            println!("Password length must be a valid integer");
             return;
         }
     };
@@ -27,7 +36,6 @@ fn main() {
     let symbols: &[u8] = b"!@#$%^&*()_-+=<>?";
 
     // Generate a random string of characters, numbers, and symbols
-    let password_length = 16; // Change the length as needed
     let password: String = (0..password_length)
         .map(|_| {
             let choices: &[&[u8]] = &[characters, numbers, symbols];
@@ -38,6 +46,6 @@ fn main() {
         .collect();
 
     // Print the random password
-    println!("Random password: {}", password);
+    println!("{}", password);
 }
 
