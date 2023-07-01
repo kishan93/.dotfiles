@@ -1,0 +1,52 @@
+alias _='sudo'
+alias sctl='systemctl'
+
+# PHP
+alias c='composer'
+alias cr='composer require'
+alias cda='composer dumpautoload'
+alias co='composer outdated --direct'
+alias update-global-composer='cd ~/.composer && composer update'
+alias composer-update-global='update-global-composer'
+
+alias art='php artisan'
+alias tinker='php artisan tinker'
+alias tw='/home/kishan/apps/Tinkerwell-2.13.0.AppImage &'
+alias sail='./vendor/bin/sail'
+
+alias punit='./vendor/bin/phpunit'
+alias pest='./vendor/bin/pest'
+
+#alias iphp='psysh' # repl
+
+alias g='git'
+alias gs='git status'
+alias gck='git checkout'
+
+alias d='docker'
+alias dc='docker-compose'
+alias dm='docker-machine'
+
+#alias k='kubectl'
+
+# Show file and folder permissions as octal
+# Usage: `octal file.txt` or `octal my/path`
+alias octal="stat -f '%A %a %N'"
+
+
+# Directories
+alias ..="cd ../"
+alias ...="cd ../../"
+alias ....="cd ../../../"
+alias .....="cd ../../../../"
+
+
+alias aliasview='less ~/.zsh_aliases'
+alias aliasedit='vim ~/.zsh_aliases'
+alias showpublickey='cat ~/.ssh/id_rsa.pub'
+alias ip="curl icanhazip.com"
+alias localip="ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0.1'"
+
+alias stencil-dock='docker run --rm -p 3000:3000 -p 3002:3002 -it --volume ~/.npm:/home/node/.npm --volume $PWD:/app aligent/stencil:3.5.1 stencil'
+
+alias good-night='i3lock && systemctl suspend -i'

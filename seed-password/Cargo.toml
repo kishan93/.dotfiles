@@ -1,0 +1,11 @@
+[package]
+name = "random-seeded-bytes"
+version = "0.1.0"
+edition = "2021"
+
+[[bin]]
+name = "random-bytes"
+path = "main.rs"
+
+[dependencies]
+rand = "0.8"
