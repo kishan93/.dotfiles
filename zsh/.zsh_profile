@@ -43,7 +43,8 @@ addToPathFront $HOME/.local/bin
 bindkey -s ^f "tmux-sessionizer\n"
 
 #tmux session attach // this is throwing option -t requires an argument
-bindkey -s ^a "tmux attach -t \$(tmux list-sessions | fzf | cut -d: -f1)\n"
+# bindkey -s ^a "tmux attach -t \$(tmux list-sessions | fzf | cut -d: -f1)\n"
+bindkey -s ^a "tmux-switch-session\n"
 
 
 catr() {

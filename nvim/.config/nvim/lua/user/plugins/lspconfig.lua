@@ -34,6 +34,20 @@ require('lspconfig').jsonls.setup({
   },
 })
 
+-- Go (gopls)
+require('lspconfig').gopls.setup({
+  capabilities = capabilities,
+  cmd = {"gopls", "serve"},  -- If gopls is in your PATH, you don't need to provide the full path.
+  settings = {
+    gopls = {
+      analyses = {
+        unusedparams = true,
+      },
+      staticcheck = true,
+    },
+  },
+})
+
 -- null-ls
 require('null-ls').setup({
   sources = {
@@ -69,14 +83,15 @@ vim.keymap.set('n', '<Leader>rn', '<cmd>lua vim.lsp.buf.rename()<CR>')
 vim.keymap.set("n", "<leader>/", vim.lsp.buf.format, { remap = false })
 -- Diagnostic configuration
 vim.diagnostic.config({
-    virtual_text = false,
+    signs = false,
+    virtual_text = true,
     float = {
       source = true,
-    }
+    },
   })
 
 -- Sign configuration
-vim.fn.sign_define('DiagnosticSignError', { text = '', texthl = 'DiagnosticSignError' })
-vim.fn.sign_define('DiagnosticSignWarn', { text = '', texthl = 'DiagnosticSignWarn' })
-vim.fn.sign_define('DiagnosticSignInfo', { text = '', texthl = 'DiagnosticSignInfo' })
-vim.fn.sign_define('DiagnosticSignHint', { text = '', texthl = 'DiagnosticSignHint' })
+-- vim.fn.sign_define('DiagnosticSignError', { text = '', texthl = 'DiagnosticSignError' })
+-- vim.fn.sign_define('DiagnosticSignWarn', { text = '', texthl = 'DiagnosticSignWarn' })
+-- vim.fn.sign_define('DiagnosticSignInfo', { text = '', texthl = 'DiagnosticSignInfo' })
+-- vim.fn.sign_define('DiagnosticSignHint', { text = '', texthl = 'DiagnosticSignHint' })

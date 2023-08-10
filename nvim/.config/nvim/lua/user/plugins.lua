@@ -28,16 +28,16 @@ use('wbthomason/packer.nvim')
 
 -- Color scheme.
 use ({
-    "navarasu/onedark.nvim",
+    "rose-pine/neovim",
     as = "onedark",
     config = function()
-      vim.cmd('colorscheme onedark')
+      vim.cmd('colorscheme rose-pine')
       vim.api.nvim_set_hl(0, 'FloatBorder', {
           fg = vim.api.nvim_get_hl_by_name('NormalFloat', true).background,
           bg = vim.api.nvim_get_hl_by_name('NormalFloat', true).background,
         })
 
-      vim.api.nvim_set_hl(0, 'NvimTreeIndentMarker', { fg = '#30323E' })
+      vim.api.nvim_set_hl(0, 'NvimTreeIndentMarker', { fg = '#20222E' })
 
       -- remove border for tlelscope
       vim.api.nvim_set_hl(0, 'TelescopeBorder', {
@@ -49,7 +49,7 @@ use ({
           fg = vim.api.nvim_get_hl_by_name('NonText', true).foreground,
           bg = vim.api.nvim_get_hl_by_name('StatusLine', true).background,
         })
-      vim.api.nvim_set_hl(0, 'IndentBlanklineChar', { fg = '#2F313C' })
+      vim.api.nvim_set_hl(0, 'IndentBlanklineChar', { fg = '#20212C' })
     end,
   })
 -- vim.g.nightflyTransparent = true

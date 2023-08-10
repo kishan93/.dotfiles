@@ -157,3 +157,5 @@ export PATH="$HOME/.config/composer/vendor/bin:$PATH"
 export PICO_SDK_PATH=$HOME/pico/pico-sdk
 
 alias pass='EDITOR=vim pass'
+
+export PATH="$PATH:/usr/local/go/bin"
