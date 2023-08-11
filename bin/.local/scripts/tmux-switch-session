@@ -13,8 +13,8 @@ fi
 tmux_running=$(pgrep tmux)
 
 if [[ -z $TMUX ]] && [[ -z $tmux_running ]]; then
-    tmux switch-client -t $selected_name
+    tmux attach -t $selected
     exit 0
 fi
 
-tmux attach -t $selected
+tmux switch-client -t $selected
