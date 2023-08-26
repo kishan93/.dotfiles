@@ -1,0 +1,56 @@
+[global]
+    # monitor = 1
+    geometry = "300x50-30+30"
+    font = Monospace 9
+    follow = mouse
+
+    # Number of lines of notification text
+    lines = 3
+
+    # Low urgency timeouts
+    low_timeout = 2
+
+    # Normal urgency timeouts
+    timeout = 5
+
+    # Critical urgency timeouts
+    critical_timeout = 0
+
+    # Icons
+    icons = true
+    icon_path = /usr/share/icons/gnome/16x16/status/:/usr/share/icons/gnome/16x16/devices/
+
+[frame]
+    width = 2
+    color = "#aaaaaa"
+
+[shortcuts]
+    # Close notification
+    close = ctrl+space
+
+    # Close all notifications
+    close_all = ctrl+shift+space
+
+    # Redisplay last message(s)
+    history = ctrl+grave
+
+    # Context menu
+    context = ctrl+shift+period
+
+[urgency_low]
+    # Important stuff
+    background = "#222222"
+    foreground = "#888888"
+    timeout = 5
+
+[urgency_normal]
+    # Normal stuff
+    background = "#285577"
+    foreground = "#ffffff"
+    timeout = 5
+
+[urgency_critical]
+    # Critical stuff
+    background = "#900000"
+    foreground = "#ffffff"
+    timeout = 0
