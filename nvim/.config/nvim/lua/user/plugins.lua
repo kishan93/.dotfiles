@@ -195,12 +195,12 @@ use({
   end,
 })
 -- Display indentation lines.
-use({
-  'lukas-reineke/indent-blankline.nvim',
-  config = function()
-    require('user/plugins/indent-blankline')
-  end,
-})
+-- use({
+--   'lukas-reineke/indent-blankline.nvim',
+--   config = function()
+--     require('user/plugins/indent-blankline')
+--   end,
+-- })
 
 -- use({
 --   'glepnir/dashboard-nvim',
@@ -336,7 +336,12 @@ use({
       require('user/plugins/harpoon')
     end,
   })
-use("github/copilot.vim")
+use({
+    'github/copilot.vim',
+    config = function ()
+      -- require('user/plugins/copilot')
+    end
+})
 
 -- use({
 --     'zbirenbaum/copilot.lua',

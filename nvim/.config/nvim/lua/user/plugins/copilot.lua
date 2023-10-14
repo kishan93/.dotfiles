@@ -1,43 +1,9 @@
-require('copilot').setup({
-  panel = {
-    enabled = true,
-    auto_refresh = false,
-    keymap = {
-      jump_prev = "[[",
-      jump_next = "]]",
-      accept = "<CR>",
-      refresh = "gr",
-      open = "<M-CR>"
-    },
-    layout = {
-      position = "bottom", -- | top | left | right
-      ratio = 0.4
-    },
-  },
-  suggestion = {
-    enabled = true,
-    auto_trigger = false,
-    debounce = 75,
-    keymap = {
-      accept = "<C-l><C-l>",
-      accept_word = false,
-      accept_line = false,
-      next = "<C-]><C-]>",
-      prev = "<C-[><C-[>",
-      dismiss = "<C-}>",
-    },
-  },
-  filetypes = {
-    yaml = true,
-    markdown = true,
-    help = false,
-    gitcommit = false,
-    gitrebase = false,
-    hgcommit = false,
-    svn = false,
-    cvs = false,
-    ["."] = false,
-  },
-  copilot_node_command = 'node', -- Node.js version must be > 16.x
-  server_opts_overrides = {},
-})
+
+vim.g.copilot_filetypes = {
+  xml = false,
+  markdown = false
+}
+
+vim.g.copilot_no_tab_map = true
+vim.keymap.set("i", "<C-t>", ":copilot#Accept,('\\<CR>')<CR>", { silent = true })
+
