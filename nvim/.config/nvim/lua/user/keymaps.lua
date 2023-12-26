@@ -7,12 +7,6 @@ vim.keymap.set('n', '<leader>Q', ':bufdo bdelete<CR>')
 vim.keymap.set('n', '<C-f>', "<cmd>silent !tmux neww tmux-sessionizer<CR>")
 
 
--- Disable arrow keys
--- vim.keymap.set('n', '<up>', '<nop>')
--- vim.keymap.set('n', '<down>', '<nop>')
--- vim.keymap.set('n', '<left>', '<nop>')
--- vim.keymap.set('n', '<right>', '<nop>')
-
 -- Allow gf to open non-existent files
 vim.keymap.set('', 'gf', ':edit <cfile><CR>')
 
@@ -29,15 +23,12 @@ vim.keymap.set('v', 'Y', 'myY`y')
 vim.keymap.set('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true })
 vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true })
 
--- Paste replace visual selection without copying it
-vim.keymap.set('v', 'p', '"_dP')
 
 -- Easy insertion of a trailing ; or , from insert mode
 vim.keymap.set('i', ';;', '<Esc>A;<Esc>')
 vim.keymap.set('i', ',,', '<Esc>A,<Esc>')
 
 -- Open the current file in the default program (on Mac this should just be just `open`)
-vim.keymap.set('n', '<leader>x', ':!xdg-open %<cr><cr>')
 
 -- Disable annoying command line thing
 vim.keymap.set('n', 'q:', ':q<CR>')
@@ -55,12 +46,14 @@ vim.keymap.set('x', '<A-j>', ":move '>+1<CR>gv-gv")
 vim.keymap.set('x', '<A-k>', ":move '<-2<CR>gv-gv")
 
 
+-- Paste replace visual selection without copying it
 vim.keymap.set("x", "<leader>p", [["_dP]])
 vim.keymap.set({"n", "v"}, "<leader>y", [["+y]])
 vim.keymap.set("n", "<leader>Y", [["+Y]])
 vim.keymap.set({"n", "v"}, "<leader>d", [["_d]])
 
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
+
 vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 
 
@@ -72,3 +65,4 @@ vim.keymap.set('i', '<leader>gg', 'v:lua.require("copilot").Accept("<CR>")', { s
 vim.g.copilot_no_tab_map = true
 
 
+vim.keymap.set("n", "<leader>e", ":Ex<CR>", { silent = true })
