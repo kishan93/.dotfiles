@@ -33,8 +33,3 @@ vim.opt.updatetime = 4001 -- Set updatime to 1ms longer than the default to prev
 vim.opt.redrawtime = 10000 -- Allow more time for loading syntax on large files
 vim.opt.completeopt = 'menuone,longest,preview'
 vim.opt.mouse = 'a' -- enable mouse for all modes
-
---set escape timeout
--- vim.opt.timeoutlen = 200
--- vim.opt.ttimeoutlen = 0
--- vim.opt.noesckeys= true

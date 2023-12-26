@@ -159,3 +159,6 @@ export PICO_SDK_PATH=$HOME/pico/pico-sdk
 alias pass='EDITOR=vim pass'
 
 export PATH="$PATH:/usr/local/go/bin"
+
+# Generated for envman. Do not edit.
+[ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
