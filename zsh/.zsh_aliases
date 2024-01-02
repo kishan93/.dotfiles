@@ -1,5 +1,6 @@
 alias _='sudo'
 alias sctl='systemctl'
+alias vim=nvim
 
 # PHP
 alias c='composer'
