@@ -9,6 +9,7 @@ lsp.ensure_installed({
   'rust_analyzer',
   'gopls',
   'sqlls',
+  'stimulus_ls',
 })
 
 -- Fix Undefined global 'vim'
