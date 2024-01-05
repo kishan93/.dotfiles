@@ -34,14 +34,14 @@ export BOGART=$HOME/work/bogart
 addToPathFront $HOME/.local/scripts
 addToPathFront $HOME/.local/bin
 # addToPathFront $HOME/.local/n/bin/
-# addToPathFront $HOME/.local/go/bin
-# addToPathFront $HOME/go/bin
+addToPathFront $HOME/.local/go/bin
+addToPathFront $HOME/go/bin
 #addToPathFront $HOME/personal/sumneko/bin
 # addToPathFront $HOME/.deno/bin
 
 # tmux sessionizer
 bindkey -s ^f "tmux-sessionizer\n"
-bindkey -s ^a "tmux-switch-session\n"
+bindkey -s ^A "tmux-switch-session\n"
 
 
 catr() {
