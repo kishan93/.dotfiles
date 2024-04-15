@@ -11,6 +11,7 @@ general {
         interval = 5
 }
 
+order += "read_file POMO"
 order += "disk /"
 order += "battery all"
 order += "load"
@@ -19,8 +20,8 @@ order += "read_file BRIGHTNESS"
 order += "tztime local"
 
 battery all {
-        # format = " %status %percentage %remaining"
-        format = " %percentage %remaining"
+        format = " %status %percentage %remaining"
+        #format = " %percentage %remaining"
 }
 
 tztime local {
@@ -44,4 +45,10 @@ read_file BRIGHTNESS {
         format = "󰃠 %content"
         path = "/home/kishan/.config/brightness"
         max_characters = 5
+}
+
+read_file POMO {
+        format = "%content"
+        path = "/home/kishan/.pomo/i3status"
+        max_characters = 200
 }

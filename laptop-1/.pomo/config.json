@@ -1,0 +1,8 @@
+{
+    "colors": {
+        "work": "hiyellow",
+        "personal": "green"
+    },
+    "publish": true,
+    "publishSocketPath": "/run/user/1000/pomo.sock"
+}

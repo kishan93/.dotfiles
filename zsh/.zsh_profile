@@ -17,7 +17,9 @@ export LANG=en_US.UTF-8
 export CC="clang-14"
 export CXX="clang++-14"
 export PYTHONBREAKPOINT="pudb.set_trace"
+export PATH=$PATH:/usr/local/go/bin
 export GOPATH=$HOME/go
+export GOBIN=$GOPATH/bin
 #export DARWINS_DIR="$HOME/work/darwins"
 #export TVUI="$HOME/work/tvui"
 #export API_TOOLS=$HOME/work/tools/edge/scripts
@@ -34,10 +36,9 @@ export BOGART=$HOME/work/bogart
 addToPathFront $HOME/.local/scripts
 addToPathFront $HOME/.local/bin
 # addToPathFront $HOME/.local/n/bin/
-addToPathFront $HOME/.local/go/bin
-addToPathFront $HOME/go/bin
 #addToPathFront $HOME/personal/sumneko/bin
 # addToPathFront $HOME/.deno/bin
+addToPathFront $GOBIN
 
 # tmux sessionizer
 bindkey -s ^f "tmux-sessionizer\n"
