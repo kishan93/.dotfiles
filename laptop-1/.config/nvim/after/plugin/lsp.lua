@@ -10,6 +10,8 @@ lsp.ensure_installed({
   'gopls',
   'sqlls',
   'stimulus_ls',
+  'templ',
+  'cmake',
 })
 
 -- Fix Undefined global 'vim'
@@ -62,3 +64,5 @@ lsp.setup()
 vim.diagnostic.config({
     virtual_text = true
 })
+
+vim.filetype.add({ extension = { templ = "templ" } })

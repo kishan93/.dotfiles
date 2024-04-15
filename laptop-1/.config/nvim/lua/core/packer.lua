@@ -58,7 +58,7 @@ return require('packer').startup(function(use)
       }
   }
 
-  use("theprimeagen/refactoring.nvim")  
+  use("theprimeagen/refactoring.nvim")
   use("folke/zen-mode.nvim")
   use("github/copilot.vim")
   use("eandrju/cellular-automaton.nvim")
