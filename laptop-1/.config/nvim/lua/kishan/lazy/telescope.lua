@@ -12,9 +12,8 @@ return {
 
         local builtin = require('telescope.builtin')
 
-        vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
-        vim.keymap.set('n', '<leader>fa',  function() builtin.find_files({ no_ignore = true, prompt_title = 'All Files' }) end, {})
-        vim.keymap.set('n', '<C-p>', builtin.git_files, {})
+        vim.keymap.set('n', '<leader>ff', builtin.git_files, {})
+        vim.keymap.set('n', '<leader>fa',  function() builtin.find_files({ hidden=true, no_ignore = true, prompt_title = 'All Files' }) end, {})
 
         vim.keymap.set('n', '<leader>fr',  function() builtin.lsp_references({ no_ignore = true, prompt_title = 'LSP References' }) end, {})
         vim.keymap.set('n', '<leader>fd',  function() builtin.lsp_document_symbols({ no_ignore = true, prompt_title = 'LSP Symbols' }) end, {})
