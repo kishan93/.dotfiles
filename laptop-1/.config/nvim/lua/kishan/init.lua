@@ -55,6 +55,14 @@ autocmd('LspAttach', {
     end
 })
 
+autocmd('FileType', {
+    pattern = 'javascript',
+    callback = function()
+        vim.opt_shiftwidth = 2
+        vim.opt_tabstop = 2
+    end
+})
+
 vim.g.netrw_browse_split = 0
 vim.g.netrw_banner = 0
 vim.g.netrw_winsize = 25
