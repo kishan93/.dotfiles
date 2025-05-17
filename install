@@ -1,10 +1,17 @@
-#!/usr/bin/env zsh
+#!/bin/sh
 
-pushd $DOTFILES
-for folder in $(echo $STOW_FOLDERS | sed "s/,/ /g")
-do
+
+stowFolders=$(cat<<EOF
+hypr
+waybar
+zsh
+nvim
+alacritty
+bin
+EOF
+)
+echo "$stowFolders" | while IFS= read -r folder; do
     echo "stow $folder"
-    stow -D $folder
-    stow $folder
+    stow -t $HOME -D $folder
+    stow -t $HOME $folder
 done
-popd

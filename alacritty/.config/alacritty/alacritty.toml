@@ -4,3 +4,5 @@ size = 14
 [window]
 decorations = 'None'
 
+[terminal]
+shell= '/bin/zsh'

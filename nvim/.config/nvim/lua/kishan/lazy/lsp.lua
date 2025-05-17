@@ -28,15 +28,14 @@ return {
         require("mason").setup()
         require("mason-lspconfig").setup({
             ensure_installed = {
-                'tsserver',
-                'eslint',
-                'intelephense',
-                'rust_analyzer',
-                'gopls',
-                'sqlls',
-                'stimulus_ls',
-                'templ',
-                'clangd',
+                --'tsserver',
+                --'intelephense',
+                --'rust_analyzer',
+                --'gopls',
+                --'sqlls',
+                --'stimulus_ls',
+                --'templ',
+                --'clangd',
             },
 
             handlers = {
