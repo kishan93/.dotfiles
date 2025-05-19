@@ -1,11 +1,11 @@
 #!/bin/sh
 
-
 stowFolders=$(cat<<EOF
 hypr
 waybar
 zsh
 nvim
+wezterm
 alacritty
 bin
 EOF

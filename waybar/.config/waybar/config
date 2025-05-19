@@ -9,7 +9,7 @@
   "modules-center": [
     "clock",
   ],
-  "modules-right": ["idle_inhibitor","cpu","memory","battery","pulseaudio","tray"],
+  "modules-right": ["idle_inhibitor","memory","battery","pulseaudio","tray"],
 
 
   "sway/workspaces": {
